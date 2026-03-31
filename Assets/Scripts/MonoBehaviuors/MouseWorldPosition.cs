@@ -3,13 +3,8 @@ using UnityEngine;
 
 namespace MonoBehaviuors
 {
-    public class MouseWorldPosition:MonoBehaviour
+    public class MouseWorldPosition:SingletonMono<MouseWorldPosition>
     {
-        public static MouseWorldPosition Instance { get;private set; }
-        private void Awake()
-        {
-            Instance = this;
-        }
 
         public Vector3 GetPosition()
         {
